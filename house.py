@@ -2,27 +2,19 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-import seaborn as sns
 import warnings, csv
 import tensorflow as tf
 warnings.filterwarnings('ignore')
 plt.style.use('ggplot')
 from sklearn.base import BaseEstimator,TransformerMixin,RegressorMixin,clone
 from sklearn.preprocessing import LabelEncoder
-from sklearn.preprocessing import RobustScaler,StandardScaler
+from sklearn.preprocessing import RobustScaler, StandardScaler
 from sklearn.metrics import mean_squared_error
-from sklearn.pipeline import Pipeline,make_pipeline
+from sklearn.pipeline import Pipeline, make_pipeline
 from scipy.stats import skew
-from sklearn.decomposition import PCA,KernelPCA
-from sklearn.model_selection import cross_val_score,GridSearchCV,KFold
-from sklearn.linear_model import LinearRegression
-from sklearn.linear_model import Ridge
+from sklearn.decomposition import PCA
 from sklearn.linear_model import Lasso
-from sklearn.ensemble import RandomForestRegressor,GradientBoostingRegressor,ExtraTreesRegressor
-from sklearn.svm import SVR,LinearSVR
-from sklearn.linear_model import ElasticNet,SGDRegressor,BayesianRidge
-from sklearn.kernel_ridge import KernelRidge
-from xgboost import XGBRegressor
+
 
 '''
 标签编码，对不连续的数字或者文本进行编号，转换成连续的数值型变量
